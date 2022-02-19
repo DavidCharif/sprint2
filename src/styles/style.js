@@ -28,7 +28,6 @@ export const LoadingStyled = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
 export const LoginStyled = styled.div`
   background-color: ${_black};
   height: 100vh;
@@ -78,7 +77,7 @@ export const LoginStyled = styled.div`
     height: 40px;
     border-radius: 8px;
     box-sizing: border-box;
-    padding-left: 10px;    
+    padding-left: 10px;
   }
   .forgottenPassword {
     margin-top: 25px;
@@ -95,7 +94,116 @@ export const LoginStyled = styled.div`
     a {
       color: ${_green};
       text-decoration: none;
-      margin-left: 5px;      
+      margin-left: 5px;
     }
+  }
+`;
+export const HomeStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: ${_black};
+  height: 100vh;
+  h3 {
+    font: ${_subtitle_subtitle1};
+    color: ${_white};
+    text-align: center;
+    margin: 12px 30px;
+  }
+  .opciones {
+    width: 100%;
+    margin-top: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    .row1 {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+    .row2 {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+    .row3 {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+    .item {
+      display: flex;
+      margin: 5px;
+      flex-direction: column;
+      align-items: center;
+      width: 96px;
+      height: 128px;
+      img {
+        height: 64px;
+        width: 64px;
+        margin: 5px;
+      }
+      .progressRound {
+        border-radius: 100%;
+        height: 74px;
+        width: 74px;
+        margin: 10px;
+        background-color: ${_black};
+      }
+      .fill {
+        
+        --fg: ${_green};
+        --bg: #DDDDDD;
+        --pgPercentage: var(--value);
+
+        border-radius: 50%;
+
+        background: radial-gradient(
+            closest-side,
+            white 80%,
+            transparent 0 99.9%,
+            white 0
+          ),
+          conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+      }
+      p {
+        color: ${_white};
+        font: ${_body1_bold};
+        margin-top: 7px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+`;
+export const NavBarStyled = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  position: sticky;
+  background-color: ${_neutral};
+  height: fit-content;
+
+  .navBarIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: ${_white};
+    img {
+      width: 24px;
+      height: 24px;
+      filter: invert(78%) sepia(94%) saturate(22%) hue-rotate(307deg)
+        brightness(107%) contrast(106%);
+      margin-top: 5px;
+    }
+
+    :hover {
+      color: ${_green};
+      filter: invert(52%) sepia(95%) saturate(331%) hue-rotate(103deg)
+        brightness(95%) contrast(88%);
+    }
+    margin: 5px 1px 0px 0px;
   }
 `;
